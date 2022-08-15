@@ -1,11 +1,15 @@
 import vdsActorSheet from "./modules/myActorSheet.js";
+import vdsItemSheet from "./modules/myItemSheet.js";
+
 import { preloadHandlebarsTemplates } from "./modules/preloadTemplates.js";
 
 Hooks.once("init", function(){
     console.log("test | Initializing Viking Death Squad");
 
     Actors.unregisterSheet("core", ActorSheet);
+    Items.unregisterSheet("core", ItemSheet);
     Actors.registerSheet("vds", vdsActorSheet, {makeDefault: true, types: ["Human", "Immortal"]});
+    Items.registerSheet("vds", vdsItemSheet, {makeDefault: true, types: ["Item", "Armor", "Skill"]});
 
     console.log("test | CHARSHEETS READY"); 
 

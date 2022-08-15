@@ -272,3 +272,15 @@
     grid-column-start: 3;
     grid-column-end: 4;
 }
+
+/* ITEM SHEET*/
+
+.fichaItem{
+    align-items: stretch;
+    background-color: red;
+    display:grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: 35% 7% 58%;
+    padding: 5px;
+    width: 100%;   
+}
