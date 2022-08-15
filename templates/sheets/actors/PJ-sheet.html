@@ -1,0 +1,51 @@
+<form class="{{cssClass}} ficha_Humano" autocomplete="off">
+        <section class="datos">
+            <h1 class="nombre"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+            <div class="charinfo">
+                <h2><label for="system.Special">Special</label></h2>
+                <input name="system.Special" type="text" value="{{actor.system.Special}}" placeholder="Special Skill"/> 
+            </div>
+            <div class="charinfo">
+                <h2><label for="system.Role">Role</label></h2>
+                <input name="system.Role" type="text" value="{{actor.system.Role}}" placeholder="Role"/> 
+            </div>
+            <div  class="charinfo">
+                <h2><label for="system.Oath">Oath</label></h2>
+                <input name="system.Oath" type="text" value="{{actor.system.Oath}}" placeholder="Oath"/>
+            </div>
+            <div  class="charinfo">
+                <h2><label for="system.Debt">Debt</label></h2>
+                <input name="system.Debt" type="text" value="{{actor.system.Debt}}" placeholder="Debt"/>
+            </div>
+            <div  class="charinfo">
+                <h2><label for="system.Code">Code</label></h2>
+                <input name="system.Code" type="text" value="{{actor.system.Code}}" placeholder="Code"/>
+            </div>        
+        </section>
+        <section class="foto">
+            <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
+        </section>
+
+   
+        <nav class="navigation sheet-tabs tabs" data-group="primary">
+                <a class="item selected" data-tab="skills"><h2>Skills</h2></a>
+                <a class="item" data-tab="equipment"><h2>Equipment</h2></a>
+                <a class="item" data-tab="bio"><h2>Bio</h2></a>
+        </nav>
+        <main class="main_page">
+            {{!-- Skill Tab --}}
+            <div class="tab skills" data-group="primary" data-tab="skills">
+                {{> "/systems/vds/templates/sheets/actors/parts/skills.html"}}
+            </div>
+            {{!-- Equip Tab --}}
+            <div class="tab equipment" data-group="primary" data-tab="equipment">
+                {{> "/systems/vds/templates/sheets/actors/parts/equipment.html"}}
+            </div>
+            {{!-- Bio Tab --}}
+            <div class="tab bio" data-group="primary" data-tab="bio">
+                {{> "/systems/vds/templates/sheets/actors/parts/bio.html"}}
+            </div>
+
+        </main>
+
+</form>

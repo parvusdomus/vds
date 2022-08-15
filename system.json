@@ -1,0 +1,27 @@
+{
+    "name": "vds",
+    "title": "Viking Death Squad (Unofficial).",
+    "description": "",
+    "version": "0.0.1",
+    "templateVersion": 1,
+    "author": "ParvusDomus",
+       "minimumCoreVersion": "10",
+       "compatibleCoreVersion": "10",
+  
+    "scripts": [],
+    "esmodules": [
+        "vds.js"
+      ],
+    "styles": [
+      "styles/vds.css"
+    ],
+    "packs": [],
+    "languages": [],
+    "socket": false,
+    "initiative": "",
+    "gridDistance": 1.5,
+    "gridUnits": "m",
+    "url": "https://github.com/parvusdomus/vds",
+    "manifest": "https://github.com/parvusdomus/vds/releases/latest/download/system.json",
+    "download": "https://github.com/parvusdomus/vds/releases/latest/download/vds.zip"
+  }

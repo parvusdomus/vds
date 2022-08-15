@@ -1,0 +1,274 @@
+/* COSAS GENERALES*/
+@font-face {
+    font-family: "FunkRocker";
+    src: url("fonts/Funkrocker.otf");
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* EDITOR*/
+.tox-edit-area
+, .editor
+, .editor-content
+{
+    /*background-color: red;*/
+    text-align: left;
+    font-family: Signika, sans-serif;
+    height: 90%;
+}
+
+.editor-content
+, .tox
+{
+    list-style: circle;
+    font-family: Signika, sans-serif;
+    text-align: left;
+    padding: 5px;
+	background-color: #cac2b085;
+    color: #000000;
+    /*height: 100%;*/
+}
+
+
+
+/*CABECERA PRINCIPAL*/
+
+.ficha_Humano{
+    align-items: stretch;
+    /*background-color: red;*/
+    display:grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: 35% 7% 58%;
+    padding: 5px;
+    width: 100%;   
+}
+
+.ficha_Humano h2{
+    border-bottom: none;
+    font-family: "FunkRocker";    
+    padding-right: 5px;
+}
+
+.ficha_Humano h1{
+    border-bottom: none;
+    font-family: "FunkRocker";    
+    padding-right: 5px;
+}
+
+.charinfo{
+    display: flex;
+    padding-right: 5px; 
+}
+
+.charinfo label{
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.charinfo input{
+    border: none;  
+    font-family: "FunkRocker"; 
+}
+
+.nombre, .nombre input{
+    text-align: center;
+    border: none; 
+}
+
+.datos{
+    /*background-color: blue;*/
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 5px;
+    width: 100%;
+}
+
+.foto{
+    /*background-color: green;*/
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 5px;
+    width: 100%;
+}
+
+/*NAV MENU*/
+
+.navigation{
+    /*background-color: yellow;*/
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.main_page{
+    /*background-color: rgb(219, 117, 34);*/
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    height: 100%;
+    width: 100%;
+
+}
+
+/*PESTAÑA HABILIDADES*/
+
+.skills {
+  /*background-color: blue;*/
+  width: 100%;
+  height: 100%;  
+  align-content: space-between;
+}
+
+.stat_skill{
+    align-items: stretch;
+    /*background-color: green;*/
+    display:grid;
+    grid-template-columns: 20% 20% 60%;
+    grid-template-rows: 16% 16% 16% 16% 16% 17;
+    padding: 5px;
+    width: 100%;  
+}
+
+.stat{
+    text-align: center;
+    background-color: black;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 7;
+    padding: 5px;
+    width: 100%;
+}
+
+.stat_value{
+    /*background-color: rgb(18, 197, 221);*/
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 7;
+    padding: 5px;
+    width: 100%;
+}
+
+.skill{
+    /*background-color: purple;*/
+    
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 7;
+    padding: 5px;
+    width: 100%;
+    
+}
+
+.skill ul{
+    
+    list-style-type: none;
+}
+
+.skill li{
+    display: grid;
+    grid-template-columns: auto 30% 8% 14%;
+    
+}
+
+.skill_name:{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.skill_advance:{
+    grid-column-start: 2;
+    grid-column-end: 3; 
+}
+
+.skill_value:{
+    grid-column-start: 3;
+    grid-column-end: 4; 
+    
+}
+
+.skill_controls:{
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.runes_area{
+    display: grid;
+   /* background-color: pink;*/
+    align-content: center;
+    align-items: center;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 10% auto 10%;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.runes_area img{
+    border: none;
+}
+
+.deaths{
+    display: inline;
+}
+
+/* BIO TAB */
+
+.bio {
+    /*background-color: blue;*/
+    width: 100%;
+    height: 100%;
+}
+
+/*PESTAÑA DE EQUIPO*/
+
+.equipment{
+    /*background-color: pink;*/
+    column-gap: 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(14, auto);
+    height: 100%;
+    width:100%
+}
+
+.equipment ul{
+    
+    list-style-type: none;
+}
+
+.equipment li{
+    display: grid;
+    grid-template-columns: auto 25% 16%
+    
+}
+
+.item_name:{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.item_damage:{
+    grid-column-start: 2;
+    grid-column-end: 3; 
+    display: inline;
+}
+
+.item_controls:{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}

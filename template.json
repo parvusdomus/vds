@@ -1,0 +1,117 @@
+{
+    "Actor":{
+        "types": ["Human","Immortal","Enemy"],
+            "Human": {
+                "Special": "",
+                "Role": "",
+                "Oath": "",
+                "Debt": "",
+                "Code": "",
+                "Power": {
+                    "min": 1,
+                    "value": 1,
+                    "bonus": 0
+                },
+                "Aim": {
+                    "min": 2,
+                    "value": 2,
+                    "bonus": 0
+                },
+                "Wits": {
+                    "min": 1,
+                    "value": 1,
+                    "bonus": 0
+                },
+                "Guts": {
+                    "min": 1,
+                    "value": 1,
+                    "bonus": 0
+                },
+                "Speed": {
+                    "min": 2,
+                    "value": 2,
+                    "bonus": 0
+                },
+                "Resolve": {
+                    "min": 1,
+                    "value": 1,
+                    "max": 1,
+                    "bonus": 0
+                },
+                "Rune_1": 0,
+                "Rune_2": 0,
+                "Rune_3": 0,
+                "Rune_4": 0,
+                "Deaths": {
+                    "value": 0,
+                    "max": 1
+                },
+                "Biography": ""
+            },
+            "Immortal": {
+                "Special": "",
+                "Role": "",
+                "Oath": "",
+                "Debt": "",
+                "Code": "",
+                "Power": {
+                    "min": 2,
+                    "value": 2,
+                    "bonus": 0
+                },
+                "Aim": {
+                    "min": 1,
+                    "value": 1,
+                    "bonus": 0
+                },
+                "Wits": {
+                    "min": 1,
+                    "value": 1,
+                    "bonus": 0
+                },
+                "Guts": {
+                    "min": 2,
+                    "value": 2,
+                    "bonus": 0
+                },
+                "Speed": {
+                    "min": 1,
+                    "value": 1,
+                    "bonus": 0
+                },
+                "Resolve": {
+                    "min": 1,
+                    "value": 1,
+                    "max": 1,
+                    "bonus": 0
+                },
+                "Rune_1": 0,
+                "Rune_2": 0,
+                "Rune_3": 0,
+                "Rune_4": 0,
+                "Deaths": {
+                    "value": 0,
+                    "max": 3
+                },
+                "Biography": ""
+
+            },
+            "Enemy": {
+
+            }
+    },
+    "Item":{
+        "types": ["Weapon", "Armor", "Skill"],
+            "Weapon": {
+
+            },
+            "Armor": {
+
+            },
+            "Skill": {
+
+            }
+
+    }
+
+}
