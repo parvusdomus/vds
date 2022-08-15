@@ -185,23 +185,23 @@
     
 }
 
-.skill_name:{
+.skill_name{
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-.skill_advance:{
+.skill_advance{
     grid-column-start: 2;
     grid-column-end: 3; 
 }
 
-.skill_value:{
+.skill_value{
     grid-column-start: 3;
     grid-column-end: 4; 
     
 }
 
-.skill_controls:{
+.skill_controls{
     grid-column-start: 4;
     grid-column-end: 5;
 }
@@ -257,18 +257,18 @@
     
 }
 
-.item_name:{
+.item_name{
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-.item_damage:{
+.item_damage{
     grid-column-start: 2;
     grid-column-end: 3; 
     display: inline;
 }
 
-.item_controls:{
+.item_controls{
     grid-column-start: 3;
     grid-column-end: 4;
 }
