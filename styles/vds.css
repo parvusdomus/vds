@@ -185,23 +185,23 @@
     
 }
 
-.skill_name{
+.PJ_skill_name{
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-.skill_advance{
+.PJ_skill_advance{
     grid-column-start: 2;
     grid-column-end: 3; 
 }
 
-.skill_value{
+.PJ_skill_value{
     grid-column-start: 3;
     grid-column-end: 4; 
     
 }
 
-.skill_controls{
+.PJ_skill_controls{
     grid-column-start: 4;
     grid-column-end: 5;
 }
@@ -257,12 +257,12 @@
     
 }
 
-.item_name{
+.PJ_item_name{
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-.item_damage{
+.PJ_item_damage{
     grid-column-start: 2;
     grid-column-end: 3; 
     display: inline;
@@ -273,14 +273,51 @@
     grid-column-end: 4;
 }
 
-/* ITEM SHEET*/
+/* ITEM SKILL AND ARMOR SHEET*/
+.main_page2{
+    /*background-color: rgb(219, 117, 34);*/
+    height: 100%;
+    width: 100%;
 
-.fichaItem{
-    align-items: stretch;
-    background-color: red;
+}
+
+.fichaSkill, .fichaArmor, .fichaItem{
     display:grid;
-    grid-template-columns: 20% 50% 30%;
-    grid-template-rows: 35% 7% 58%;
-    padding: 5px;
-    width: 100%;   
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+}
+
+.fichaSkill h1, .fichaArmor h1, .fichaItem h1{
+    border-bottom: none;
+}
+
+.skill_name, .armor_name, .Bonus_title, .item_name{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    font-family: "FunkRocker"; 
+    text-align: center;
+}
+
+.statroll{
+    grid-column-end: span 2; 
+}
+
+.skillInfo, .ArmorInfo, .ItemInfo{
+    font-family: "FunkRocker"; 
+    text-align: center;
+    border: none;
+}
+
+.skillInfo h2, .ArmorInfo h2, .ItemInfo h2{
+    border-bottom: none;
+}
+
+.skillInfo input, .ArmorInfo input, .ItemInfo input{
+    border: none;
+}
+
+.skill_editor, .armor_editor, .item_editor{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-end: span 2;
 }

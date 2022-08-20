@@ -15,5 +15,5 @@ Hooks.once("init", function(){
 
     console.log ("test | LOADING TEMPLATES");
     preloadHandlebarsTemplates();
-    console.log ("test | DONE LOADING TEMPLATES")
+    console.log ("test | DONE LOADING TEMPLATES");
 });

@@ -30,7 +30,8 @@
                 "Speed": {
                     "min": 2,
                     "value": 2,
-                    "bonus": 0
+                    "bonus": 0,
+                    "current_initiative": 0
                 },
                 "Resolve": {
                     "min": 0,
@@ -77,7 +78,8 @@
                 "Speed": {
                     "min": 1,
                     "value": 1,
-                    "bonus": 0
+                    "bonus": 0,
+                    "current_initiative": 0
                 },
                 "Resolve": {
                     "min": 0,
@@ -103,24 +105,23 @@
     "Item":{
         "types": ["Item", "Armor", "Skill"],
             "Item": {
-                "Bonus_To_Use":
-                {
-                    "Power": 0,
-                    "Aim": 0,
-                    "Wits": 0,
-                    "Guts": 0,
-                    "Speed": 0
-                },
                 "Bonus_To_Wear":
                 {
                     "Power": 0,
                     "Aim": 0,
                     "Wits": 0,
                     "Guts": 0,
-                    "Speed": 0
+                    "Speed": 0,
+                    "Resolve": 0
+                },
+                "Hits": 
+                {
+                    "max": 3,
+                    "value": 0
                 },
                 "Material": "Iron",
-                "Skill": "None",
+                "Stat": "None",
+                "Bonus": 0,
                 "Tags":"",
                 "Description": ""
 
@@ -132,7 +133,8 @@
                     "Aim": 0,
                     "Wits": 0,
                     "Guts": 0,
-                    "Speed": 0
+                    "Speed": 0,
+                    "Resolve": 0
                 },
                 "Hits": 
                 {
@@ -145,9 +147,23 @@
             },
             "Skill": {
                 "Difficulty": 6,
-                "Value": 1,
+                "Level": 1,
                 "Advance": 0,
-                "Description": ""
+                "Description": "",
+                "Stat_Roll": 
+                {
+                    "value": false,
+                    "Stat": "Power"
+                },
+                "Bonus_To_Have":
+                {
+                    "Power": 0,
+                    "Aim": 0,
+                    "Wits": 0,
+                    "Guts": 0,
+                    "Speed": 0,
+                    "Resolve": 0
+                }
             }
 
     }

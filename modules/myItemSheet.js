@@ -4,7 +4,7 @@ export default class vdsItemSheet extends ItemSheet{
         classes: ["vds", "sheet", "item"],
         width: 600,
         height: 450,
-        resizable: true,
+        resizable: true
       });
     }
     get template(){

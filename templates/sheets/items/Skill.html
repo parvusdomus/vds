@@ -1,3 +1,53 @@
 <form class="{{cssClass}} fichaSkill" autocomplete="off">
-    <label>HOJA HABILIDAD</label>   
+    <div class="skill_name"><h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1></div>
+    <div  class="skillInfo">
+        <h2><label for="system.Level">Level</label></h2>
+        <input name="system.Level" type="number" value="{{item.system.Level}}"/>
+    </div>
+    <div  class="skillInfo">
+        <h2><label for="system.Advance">Advance</label></h2>
+        <input name="system.Advance" type="number" value="{{item.system.Advance}}"/>
+    </div>
+    <div  class="skillInfo">
+        <h2><label for="system.Difficulty">Difficulty</label></h2>
+        <input name="system.Difficulty" type="number" value="{{item.system.Difficulty}}"/>
+    </div>
+    <div  class="skillInfo statroll">
+        <h2><label for="system.Stat_Roll.value">Stat Roll?</label></h2>
+        <input name="system.Stat_Roll.value" type="checkbox" value="{{item.system.Stat_Roll.value}}"/>
+    </div>
+    <div  class="skillInfo">
+        <h2><label for="system.Stat_Roll.Stat">Stat</label></h2>
+        <input name="system.Stat_Roll.Stat" type="text" value="{{item.system.Stat_Roll.Stat}}"/>
+    </div>
+    <div  class="skillInfo">
+    </div>
+    <div class="Bonus_title"><h1>Bonus To Have</h1></div>
+    <div  class="skillInfo">
+        <h2><label for="system.Bonus_To_Have.Power">Power</label></h2>
+        <input name="system.Bonus_To_Have.Power" type="number" value="{{item.system.Bonus_To_Have.Power}}"/>
+    </div>
+    <div  class="skillInfo">
+        <h2><label for="system.Bonus_To_Have.Aim">Aim</label></h2>
+        <input name="system.Bonus_To_Have.Aim" type="number" value="{{item.system.Bonus_To_Have.Aim}}"/>
+    </div>
+    <div  class="skillInfo">
+        <h2><label for="system.Bonus_To_Have.Wits">Wits</label></h2>
+        <input name="system.Bonus_To_Have.Wits" type="number" value="{{item.system.Bonus_To_Have.Wits}}"/>
+    </div>
+    <div  class="skillInfo">
+        <h2><label for="system.Bonus_To_Have.Guts">Guts</label></h2>
+        <input name="system.Bonus_To_Have.Guts" type="number" value="{{item.system.Bonus_To_Have.Guts}}"/>
+    </div>
+    <div  class="skillInfo">
+        <h2><label for="system.Bonus_To_Have.Speed">Speed</label></h2>
+        <input name="system.Bonus_To_Have.Speed" type="number" value="{{item.system.Bonus_To_Have.Speed}}"/>
+    </div>
+    <div  class="skillInfo">
+        <h2><label for="system.Bonus_To_Have.Resolve">Resolve</label></h2>
+        <input name="system.Bonus_To_Have.Resolve" type="number" value="{{item.system.Bonus_To_Have.Resolve}}"/>
+    </div>
+    <div class="skill_editor">
+        {{editor item.system.Description target="system.Description" button=true owner=owner editable=true}}
+    </div>        
 </form>

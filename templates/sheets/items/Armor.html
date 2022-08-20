@@ -1,3 +1,49 @@
 <form class="{{cssClass}} fichaArmor" autocomplete="off">
-    <label>HOJA ARMADURA</label>   
+    <div class="armor_name"><h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1></div>
+    <div></div>
+    <div  class="ArmorInfo">
+        <h2><label for="system.Hits.value">Hits</label></h2>
+        <input name="system.Hits.value" type="number" value="{{item.system.Hits.value}}"/>
+    </div>
+    <div  class="ArmorInfo">
+        <h2><label for="system.Hits.value">Max. Hits</label></h2>
+        <input name="system.Hits.max" type="number" value="{{item.system.Hits.max}}"/>
+    </div>
+    <div  class="ArmorInfo">
+        <h2><label for="system.Material">Material</label></h2>
+        <input name="system.Material" type="text" value="{{item.system.Material}}"/>
+    </div>
+    <div  class="ArmorInfo">
+        <h2><label for="system.Tags">Tags</label></h2>
+        <input name="system.Tags" type="text" value="{{item.system.Tags}}"/>
+    </div>
+    <div></div>
+    <div class="Bonus_title"><h1>Bonus When Wearing</h1></div>
+    <div  class="ArmorInfo">
+        <h2><label for="system.Bonus_To_Wear.Power">Power</label></h2>
+        <input name="system.Bonus_To_Wear.Power" type="number" value="{{item.system.Bonus_To_Wear.Power}}"/>
+    </div>
+    <div  class="ArmorInfo">
+        <h2><label for="system.Bonus_To_Wear.Aim">Aim</label></h2>
+        <input name="system.Bonus_To_Wear.Aim" type="number" value="{{item.system.Bonus_To_Wear.Aim}}"/>
+    </div>
+    <div  class="ArmorInfo">
+        <h2><label for="system.Bonus_To_Wear.Wits">Wits</label></h2>
+        <input name="system.Bonus_To_Wear.Wits" type="number" value="{{item.system.Bonus_To_Wear.Wits}}"/>
+    </div>
+    <div  class="ArmorInfo">
+        <h2><label for="system.Bonus_To_Wear.Guts">Guts</label></h2>
+        <input name="system.Bonus_To_Wear.Guts" type="number" value="{{item.system.Bonus_To_Wear.Guts}}"/>
+    </div>
+    <div  class="ArmorInfo">
+        <h2><label for="system.Bonus_To_Wear.Speed">Speed</label></h2>
+        <input name="system.Bonus_To_Wear.Speed" type="number" value="{{item.system.Bonus_To_Wear.Speed}}"/>
+    </div>
+    <div  class="ArmorInfo">
+        <h2><label for="system.Bonus_To_Wear.Resolve">Resolve</label></h2>
+        <input name="system.Bonus_To_Wear.Resolve" type="number" value="{{item.system.Bonus_To_Wear.Resolve}}"/>
+    </div>
+    <div class="armor_editor">
+        {{editor item.system.Description target="system.Description" button=true owner=owner editable=true}}
+    </div>        
 </form>

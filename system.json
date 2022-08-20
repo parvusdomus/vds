@@ -18,7 +18,7 @@
     "packs": [],
     "languages": [],
     "socket": false,
-    "initiative": "",
+    "initiative": "(@Speed.value)d6",
     "gridDistance": 1.5,
     "gridUnits": "m",
     "url": "https://github.com/parvusdomus/vds",
