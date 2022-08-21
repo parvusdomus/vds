@@ -108,6 +108,17 @@ export default class vdsActorSheet extends ActorSheet{
                     Resolve_Bonus+=Number(i.system.Bonus.Resolve);
                 }
             } else
+            if (i.type === "Item" || i.type === "Armor"){
+                if (i.system.Hits.value < i.system.Hits.max){
+                    Power_Bonus+=Number(i.system.Bonus.Power);
+                    Aim_Bonus+=Number(i.system.Bonus.Aim);
+                    Wits_Bonus+=Number(i.system.Bonus.Wits);
+                    Guts_Bonus+=Number(i.system.Bonus.Guts);
+                    Speed_Bonus+=Number(i.system.Bonus.Speed);
+                    Resolve_Bonus+=Number(i.system.Bonus.Resolve); 
+                }
+            }
+            else
             {
                 Power_Bonus+=Number(i.system.Bonus.Power);
                 Aim_Bonus+=Number(i.system.Bonus.Aim);
@@ -116,6 +127,8 @@ export default class vdsActorSheet extends ActorSheet{
                 Speed_Bonus+=Number(i.system.Bonus.Speed);
                 Resolve_Bonus+=Number(i.system.Bonus.Resolve);
             }
+
+
             
         }
         let Power_Total= Power_Bonus + Number(this.actor.system.Power.value);

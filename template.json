@@ -41,7 +41,7 @@
                 "Resolve": {
                     "min": 0,
                     "value": 1,
-                    "max": 1,
+                    "current": 1,
                     "bonus": 0,
                     "total": 1
                 },
