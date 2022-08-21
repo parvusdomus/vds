@@ -290,55 +290,56 @@
         </label></h2>
         <h2><label class="mod_skill" data-skill="Resolve">
             {{#if (gte actor.system.Resolve.value 1)}}
-                <i class="fas fa-square"></i>
+                {{#if (gte actor.system.Resolve.current 1)}}<i class="fas fa-square" style="color: grey;"></i>{{else}}<i class="fas fa-square"  style="color: black;"></i>{{/if}}  
                 {{else}}
                     {{#if (gte actor.system.Resolve.total 1)}}
-                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                        {{#if (gte actor.system.Resolve.current 1)}}<span style="color:rgb(139, 84, 84)"><i class="fas fa-square"></i></span>{{else}}<span style="color:darkred"><i class="fas fa-square"></i></span>{{/if}}
+                        
                     {{else}}
                         <i class="far fa-square"></i>
                     {{/if}}
             {{/if}}
             {{#if (gte actor.system.Resolve.value 2)}}
-                <i class="fas fa-square"></i>
+            {{#if (gte actor.system.Resolve.current 2)}}<i class="fas fa-square" style="color: grey;"></i>{{else}}<i class="fas fa-square"  style="color: black;"></i>{{/if}}
                 {{else}}
                     {{#if (gte actor.system.Resolve.total 2)}}
-                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{#if (gte actor.system.Resolve.current 2)}}<span style="color:rgb(139, 84, 84)"><i class="fas fa-square"></i></span>{{else}}<span style="color:darkred"><i class="fas fa-square"></i></span>{{/if}}
                     {{else}}
                         <i class="far fa-square"></i>
                     {{/if}}
             {{/if}}
             {{#if (gte actor.system.Resolve.value 3)}}
-                <i class="fas fa-square"></i>
+            {{#if (gte actor.system.Resolve.current 3)}}<i class="fas fa-square" style="color: grey;"></i>{{else}}<i class="fas fa-square"  style="color: black;"></i>{{/if}}
                 {{else}}
                     {{#if (gte actor.system.Resolve.total 3)}}
-                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{#if (gte actor.system.Resolve.current 3)}}<span style="color:rgb(139, 84, 84)"><i class="fas fa-square"></i></span>{{else}}<span style="color:darkred"><i class="fas fa-square"></i></span>{{/if}}
                     {{else}}
                         <i class="far fa-square"></i>
                     {{/if}}
             {{/if}}
             {{#if (gte actor.system.Resolve.value 4)}}
-                <i class="fas fa-square"></i>
+            {{#if (gte actor.system.Resolve.current 4)}}<i class="fas fa-square" style="color: grey;"></i>{{else}}<i class="fas fa-square"  style="color: black;"></i>{{/if}}
                 {{else}}
                     {{#if (gte actor.system.Resolve.total 4)}}
-                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{#if (gte actor.system.Resolve.current 4)}}<span style="color:rgb(139, 84, 84)"><i class="fas fa-square"></i></span>{{else}}<span style="color:darkred"><i class="fas fa-square"></i></span>{{/if}}
                     {{else}}
                         <i class="far fa-square"></i>
                     {{/if}}
             {{/if}}
             {{#if (gte actor.system.Resolve.value 5)}}
-                <i class="fas fa-square"></i>
+            {{#if (gte actor.system.Resolve.current 5)}}<i class="fas fa-square" style="color: grey;"></i>{{else}}<i class="fas fa-square"  style="color: black;"></i>{{/if}}
                 {{else}}
                     {{#if (gte actor.system.Resolve.total 5)}}
-                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{#if (gte actor.system.Resolve.current 5)}}<span style="color:rgb(139, 84, 84)"><i class="fas fa-square"></i></span>{{else}}<span style="color:darkred"><i class="fas fa-square"></i></span>{{/if}}
                     {{else}}
                         <i class="far fa-square"></i>
                     {{/if}}
             {{/if}}
             {{#if (gte actor.system.Resolve.value 6)}}
-                <i class="fas fa-square"></i>
+            {{#if (gte actor.system.Resolve.current 6)}}<i class="fas fa-square" style="color: grey;"></i>{{else}}<i class="fas fa-square"  style="color: black;"></i>{{/if}}
                 {{else}}
                     {{#if (gte actor.system.Resolve.total 6)}}
-                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{#if (gte actor.system.Resolve.current 6)}}<span style="color:rgb(139, 84, 84)"><i class="fas fa-square"></i></span>{{else}}<span style="color:darkred"><i class="fas fa-square"></i></span>{{/if}}
                     {{else}}
                         <i class="far fa-square"></i>
                     {{/if}}

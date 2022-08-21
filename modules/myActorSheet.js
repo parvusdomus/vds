@@ -176,6 +176,24 @@ export default class vdsActorSheet extends ActorSheet{
             this.actor.update(update, {diff: true});
         });
 
+        html.find('.mod_skill').contextmenu(ev => {
+            const element = ev.currentTarget;
+            const dataset = element.dataset;
+            const skill=dataset.skill;
+            if (skill !== "Resolve"){return};
+            const update = {};
+            update.data = {};
+            var valor_actual=Number(this.actor.system[skill].current)
+            var valor_nuevo=valor_actual+1
+            if (valor_nuevo>6){valor_nuevo=0}
+            const habilidad='system.'+skill+'.current'
+            update[habilidad] = valor_nuevo;
+            update.id = this.actor.id;
+            this.actor.update(update, {diff: true});
+            console.log ("CURRENT RESOLVE")
+            console.log (this.actor.system[skill].current)
+        });
+
         html.find('.mod_death').click(ev => {
             const element = ev.currentTarget;
             const update = {};
