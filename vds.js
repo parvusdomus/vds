@@ -9,7 +9,7 @@ Hooks.once("init", function(){
     Actors.unregisterSheet("core", ActorSheet);
     Items.unregisterSheet("core", ItemSheet);
     Actors.registerSheet("vds", vdsActorSheet, {makeDefault: true, types: ["Human", "Immortal"]});
-    Items.registerSheet("vds", vdsItemSheet, {makeDefault: true, types: ["Item", "Armor", "Skill"]});
+    Items.registerSheet("vds", vdsItemSheet, {makeDefault: true, types: ["Item", "Armor", "Skill", "Rune"]});
 
     console.log("test | CHARSHEETS READY"); 
 

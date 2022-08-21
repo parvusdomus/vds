@@ -18,6 +18,7 @@ export default class vdsActorSheet extends ActorSheet{
         const data = super.getData();
         if (this.actor.type == 'Human' || this.actor.type == 'Immortal') {
           this._prepareCharacterItems(data);
+          this._calculaValores(data);
         }
         return data;
     }
@@ -29,24 +30,62 @@ export default class vdsActorSheet extends ActorSheet{
          const Items = [];
          const Armors = [];
          const Skills = [];
+         const Runes = [];
          // Ordena los objetos por tipo y los mete en el array correspondiente
         for (let i of sheetData.items) {
           let item = i.system;
           i.img = i.img || DEFAULT_TOKEN;
           if (i.type === 'Item') {
-            Items.push(i);
-          }
+                if (Items.length < 10){
+                    Items.push(i);
+                }
+                else
+                {
+                    ui.notifications.warn("You have the maximum number of items: 10. You can't add more until you delete some.");
+                    this.actor.deleteEmbeddedDocuments("Item", [i._id])
+                }
+                
+            }
           else if (i.type === 'Armor') {
-            Armors.push(i);
-          }
+                if (Armors.length < 4){
+                    Armors.push(i);
+                }
+                else
+                {
+                    ui.notifications.warn("You have the maximum number of armors: 4. You can't add more until you delete some.");
+                    this.actor.deleteEmbeddedDocuments("Item", [i._id])
+                }
+            }
            else if (i.type === "Skill") {
-             Skills.push(i);
-           }
+                if (Skills.length < 6){
+                    Skills.push(i);
+                }
+                else
+                {
+                    ui.notifications.warn("You have the maximum number of skills: 7. You can't add more until you delete some.");
+                    this.actor.deleteEmbeddedDocuments("Item", [i._id])
+                }   
+            }
+            else if (i.type === "Rune") {
+                if (Runes.length < 4){
+                    Runes.push(i);
+                }
+                else
+                {
+                    ui.notifications.warn("You have the maximum number of runes: 4. You can't add more until you delete some.");
+                    this.actor.deleteEmbeddedDocuments("Item", [i._id])
+                }
+               }
         }
         //Asigno cada array al actordata
         actorData.Items = Items;
         actorData.Armors = Armors;
         actorData.Skills = Skills;
+        actorData.Runes = Runes;
+    }
+
+    _calculaValores(actorData) {
+
     }
 
     /*COSAS DE EVENTOS Y CLICKS VARIOS */
@@ -67,21 +106,6 @@ export default class vdsActorSheet extends ActorSheet{
             var valor_nuevo=valor_actual+1
             if (valor_nuevo>6){valor_nuevo=valor_minimo}
             const habilidad='system.'+skill+'.value'
-            update[habilidad] = valor_nuevo;
-            update.id = this.actor.id;
-            this.actor.update(update, {diff: true});
-        });
-
-        html.find('.mod_rune').click(ev => {
-            const element = ev.currentTarget;
-            const dataset = element.dataset;
-            const rune=dataset.rune;
-            const update = {};
-            update.data = {};
-            var valor_actual=Number(this.actor.system[rune])
-            var valor_nuevo=valor_actual+1
-            if (valor_nuevo>3){valor_nuevo=0}
-            const habilidad='system.'+rune
             update[habilidad] = valor_nuevo;
             update.id = this.actor.id;
             this.actor.update(update, {diff: true});
@@ -133,6 +157,25 @@ export default class vdsActorSheet extends ActorSheet{
             var valor_minimo=0;
             var valor_nuevo=advance_curr+1
             if (valor_nuevo>5){valor_nuevo=valor_minimo}
+            item.update ({ 'system.Advance': valor_nuevo });
+        });
+
+        html.find('.mod_rune').click(ev => {
+            const element = ev.currentTarget;
+            const dataset = element.dataset;
+            const rune=dataset.rune;
+            console.log ("RUNE")
+            console.log (rune)
+            const update = {};
+            update.data = {};
+            var item=this.actor.items.get(rune);
+            console.log ("ITEM")
+            console.log (item)
+            var valor_actual=Number(item.system.Advance)
+            var valor_nuevo=valor_actual+1
+            if (valor_nuevo>3){valor_nuevo=0}
+            console.log ("VALOR NUEVO")
+            console.log (valor_nuevo)
             item.update ({ 'system.Advance': valor_nuevo });
         });
 

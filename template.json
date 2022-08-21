@@ -39,10 +39,6 @@
                     "max": 1,
                     "bonus": 0
                 },
-                "Rune_1": 0,
-                "Rune_2": 0,
-                "Rune_3": 0,
-                "Rune_4": 0,
                 "Deaths": {
                     "value": 0,
                     "max": 1
@@ -87,10 +83,6 @@
                     "max": 1,
                     "bonus": 0
                 },
-                "Rune_1": 0,
-                "Rune_2": 0,
-                "Rune_3": 0,
-                "Rune_4": 0,
                 "Deaths": {
                     "value": 0,
                     "max": 3
@@ -103,7 +95,7 @@
             }
     },
     "Item":{
-        "types": ["Item", "Armor", "Skill"],
+        "types": ["Item", "Armor", "Skill", "Rune"],
             "Item": {
                 "Bonus_To_Wear":
                 {
@@ -155,6 +147,19 @@
                     "value": false,
                     "Stat": "Power"
                 },
+                "Bonus_To_Have":
+                {
+                    "Power": 0,
+                    "Aim": 0,
+                    "Wits": 0,
+                    "Guts": 0,
+                    "Speed": 0,
+                    "Resolve": 0
+                }
+            },
+            "Rune": {
+                "Description": "",
+                "Advance": 0,
                 "Bonus_To_Have":
                 {
                     "Power": 0,

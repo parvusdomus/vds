@@ -207,12 +207,14 @@
 }
 
 .runes_area{
+    grid-column-start: 1;
+    grid-column-end: 6;
     display: grid;
    /* background-color: pink;*/
     align-content: center;
     align-items: center;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 10% auto 10%;
+    grid-template-rows: auto;
     justify-content: center;
     justify-items: center;
     width: 100%;
@@ -220,6 +222,7 @@
 
 .runes_area img{
     border: none;
+    width: 50px;
 }
 
 .deaths{
@@ -281,43 +284,46 @@
 
 }
 
-.fichaSkill, .fichaArmor, .fichaItem{
+.fichaSkill, .fichaArmor, .fichaItem, .fichaRune{
     display:grid;
     grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: auto auto auto auto auto auto auto auto;
 }
 
-.fichaSkill h1, .fichaArmor h1, .fichaItem h1{
+.fichaSkill h1, .fichaArmor h1, .fichaItem h1, .fichaRune h1{
     border-bottom: none;
 }
 
-.skill_name, .armor_name, .Bonus_title, .item_name{
+.skill_name, .armor_name, .Bonus_title, .item_name, .rune_name{
+    border: none;
     grid-column-start: 1;
     grid-column-end: 7;
     font-family: "FunkRocker"; 
     text-align: center;
 }
 
-.statroll{
+.statroll, .rune_imagen{
     grid-column-end: span 2; 
 }
 
-.skillInfo, .ArmorInfo, .ItemInfo{
+
+.skillInfo, .ArmorInfo, .ItemInfo, .RuneInfo{
     font-family: "FunkRocker"; 
     text-align: center;
     border: none;
 }
 
-.skillInfo h2, .ArmorInfo h2, .ItemInfo h2{
+.skillInfo h2, .ArmorInfo h2, .ItemInfo h2, .RuneInfo h2{
     border-bottom: none;
 }
 
-.skillInfo input, .ArmorInfo input, .ItemInfo input{
+.skillInfo input, .ArmorInfo input, .ItemInfo input, .RuneInfo input{
     border: none;
 }
 
-.skill_editor, .armor_editor, .item_editor{
+.skill_editor, .armor_editor, .item_editor, .rune_editor{
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-end: span 2;
 }
+
