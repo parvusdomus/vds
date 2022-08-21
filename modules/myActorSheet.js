@@ -100,30 +100,44 @@ export default class vdsActorSheet extends ActorSheet{
             console.log (i)
             if (i.type === "Rune"){
                 if (i.system.Advance == 3){
-                    Power_Bonus+=i.system.Bonus.Power;
-                    Aim_Bonus+=i.system.Bonus.Aim;
-                    Wits_Bonus+=i.system.Bonus.Wits;
-                    Guts_Bonus+=i.system.Bonus.Guts;
-                    Speed_Bonus+=i.system.Bonus.Speed;
-                    Resolve_Bonus+=i.system.Bonus.Resolve;
+                    Power_Bonus+=Number(i.system.Bonus.Power);
+                    Aim_Bonus+=Number(i.system.Bonus.Aim);
+                    Wits_Bonus+=Number(i.system.Bonus.Wits);
+                    Guts_Bonus+=Number(i.system.Bonus.Guts);
+                    Speed_Bonus+=Number(i.system.Bonus.Speed);
+                    Resolve_Bonus+=Number(i.system.Bonus.Resolve);
                 }
             } else
             {
-                Power_Bonus+=i.system.Bonus.Power;
-                Aim_Bonus+=i.system.Bonus.Aim;
-                Wits_Bonus+=i.system.Bonus.Wits;
-                Guts_Bonus+=i.system.Bonus.Guts;
-                Speed_Bonus+=i.system.Bonus.Speed;
-                Resolve_Bonus+=i.system.Bonus.Resolve;
+                Power_Bonus+=Number(i.system.Bonus.Power);
+                Aim_Bonus+=Number(i.system.Bonus.Aim);
+                Wits_Bonus+=Number(i.system.Bonus.Wits);
+                Guts_Bonus+=Number(i.system.Bonus.Guts);
+                Speed_Bonus+=Number(i.system.Bonus.Speed);
+                Resolve_Bonus+=Number(i.system.Bonus.Resolve);
             }
             
         }
+        let Power_Total= Power_Bonus + Number(this.actor.system.Power.value);
+        let Aim_Total= Aim_Bonus + Number(this.actor.system.Aim.value);
+        let Wits_Total= Wits_Bonus + Number(this.actor.system.Wits.value);
+        let Guts_Total= Guts_Bonus + Number(this.actor.system.Guts.value);
+        let Speed_Total= Speed_Bonus + Number(this.actor.system.Speed.value);
+        let Resolve_Total= Resolve_Bonus + Number(this.actor.system.Resolve.value);
+
         this.actor.update ({ 'system.Power.bonus': Power_Bonus });
         this.actor.update ({ 'system.Aim.bonus': Aim_Bonus });
         this.actor.update ({ 'system.Wits.bonus': Wits_Bonus });
         this.actor.update ({ 'system.Guts.bonus': Guts_Bonus });
         this.actor.update ({ 'system.Speed.bonus': Speed_Bonus });
         this.actor.update ({ 'system.Resolve.bonus': Resolve_Bonus });
+
+        this.actor.update ({ 'system.Power.total': Power_Total });
+        this.actor.update ({ 'system.Aim.total': Aim_Total });
+        this.actor.update ({ 'system.Wits.total': Wits_Total });
+        this.actor.update ({ 'system.Guts.total': Guts_Total });
+        this.actor.update ({ 'system.Speed.total': Speed_Total });
+        this.actor.update ({ 'system.Resolve.total': Resolve_Total });
     }
 
     /*COSAS DE EVENTOS Y CLICKS VARIOS */

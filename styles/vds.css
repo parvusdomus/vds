@@ -39,7 +39,7 @@
 
 .ficha_Humano{
     align-items: stretch;
-    /*background-color: red;*/
+    background-color: white;
     display:grid;
     grid-template-columns: 20% 50% 30%;
     grid-template-rows: 35% 7% 58%;
@@ -51,6 +51,10 @@
     border-bottom: none;
     font-family: "FunkRocker";    
     padding-right: 5px;
+}
+
+.ficha_Humano img{
+    background-color: black;
 }
 
 .ficha_Humano h1{

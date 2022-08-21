@@ -10,34 +10,40 @@
                 "Power": {
                     "min": 1,
                     "value": 1,
-                    "bonus": 0
+                    "bonus": 0,
+                    "total": 1
                 },
                 "Aim": {
                     "min": 2,
                     "value": 2,
-                    "bonus": 0
+                    "bonus": 0,
+                    "total": 2
                 },
                 "Wits": {
                     "min": 1,
                     "value": 1,
-                    "bonus": 0
+                    "bonus": 0,
+                    "total": 1
                 },
                 "Guts": {
                     "min": 1,
                     "value": 1,
-                    "bonus": 0
+                    "bonus": 0,
+                    "total": 1
                 },
                 "Speed": {
                     "min": 2,
                     "value": 2,
                     "bonus": 0,
+                    "total": 2,
                     "current_initiative": 0
                 },
                 "Resolve": {
                     "min": 0,
                     "value": 1,
                     "max": 1,
-                    "bonus": 0
+                    "bonus": 0,
+                    "total": 1
                 },
                 "Deaths": {
                     "value": 0,
@@ -54,34 +60,40 @@
                 "Power": {
                     "min": 2,
                     "value": 2,
-                    "bonus": 0
+                    "bonus": 0,
+                    "total": 2
                 },
                 "Aim": {
                     "min": 1,
                     "value": 1,
-                    "bonus": 0
+                    "bonus": 0,
+                    "total": 1
                 },
                 "Wits": {
                     "min": 1,
                     "value": 1,
-                    "bonus": 0
+                    "bonus": 0,
+                    "total": 1
                 },
                 "Guts": {
                     "min": 2,
                     "value": 2,
-                    "bonus": 0
+                    "bonus": 0,
+                    "total": 2
                 },
                 "Speed": {
                     "min": 1,
                     "value": 1,
                     "bonus": 0,
+                    "total": 1,
                     "current_initiative": 0
                 },
                 "Resolve": {
                     "min": 0,
                     "value": 1,
                     "max": 1,
-                    "bonus": 0
+                    "bonus": 0,
+                    "total": 1
                 },
                 "Deaths": {
                     "value": 0,

@@ -9,44 +9,284 @@
     </div>
     <div class="stat_value">
         <h2><label class="mod_skill" data-skill="Power">
-            {{#if (gte actor.system.Power.value 1)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Power.value 2)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Power.value 3)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Power.value 4)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Power.value 5)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Power.value 6)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
+            {{#if (gte actor.system.Power.value 1)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Power.total 1)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Power.value 2)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Power.total 2)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Power.value 3)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Power.total 3)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Power.value 4)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Power.total 4)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Power.value 5)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Power.total 5)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Power.value 6)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Power.total 6)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
         </label></h2>
         <h2><label class="mod_skill" data-skill="Aim">
-            {{#if (gte actor.system.Aim.value 1)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Aim.value 2)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Aim.value 3)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Aim.value 4)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Aim.value 5)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Aim.value 6)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
+            {{#if (gte actor.system.Aim.value 1)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Aim.total 1)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Aim.value 2)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Aim.total 2)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Aim.value 3)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Aim.total 3)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Aim.value 4)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Aim.total 4)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Aim.value 5)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Aim.total 5)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Aim.value 6)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Aim.total 6)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
         </label></h2>
         <h2><label class="mod_skill" data-skill="Wits">
-            {{#if (gte actor.system.Wits.value 1)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Wits.value 2)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Wits.value 3)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Wits.value 4)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Wits.value 5)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Wits.value 6)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
+            {{#if (gte actor.system.Wits.value 1)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Wits.total 1)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Wits.value 2)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Wits.total 2)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Wits.value 3)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Wits.total 3)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Wits.value 4)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Wits.total 4)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Wits.value 5)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Wits.total 5)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Wits.value 6)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Wits.total 6)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
         </label></h2>
         <h2><label class="mod_skill" data-skill="Guts">
-            {{#if (gte actor.system.Guts.value 1)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Guts.value 2)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Guts.value 3)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Guts.value 4)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Guts.value 5)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Guts.value 6)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
+            {{#if (gte actor.system.Guts.value 1)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Guts.total 1)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Guts.value 2)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Guts.total 2)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Guts.value 3)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Guts.total 3)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Guts.value 4)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Guts.total 4)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Guts.value 5)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Guts.total 5)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Guts.value 6)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Guts.total 6)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
         </label></h2>
         <h2><label class="mod_skill" data-skill="Speed">
-            {{#if (gte actor.system.Speed.value 1)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Speed.value 2)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Speed.value 3)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Speed.value 4)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Speed.value 5)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
-            {{#if (gte actor.system.Speed.value 6)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
+            {{#if (gte actor.system.Speed.value 1)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Speed.total 1)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Speed.value 2)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Speed.total 2)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Speed.value 3)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Speed.total 3)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Speed.value 4)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Speed.total 4)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Speed.value 5)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Speed.total 5)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
+            {{#if (gte actor.system.Speed.value 6)}}
+                <i class="fas fa-square"></i>
+                {{else}}
+                    {{#if (gte actor.system.Speed.total 6)}}
+                        <span style="color:darkred"><i class="fas fa-square"></i></span>
+                    {{else}}
+                        <i class="far fa-square"></i>
+                    {{/if}}
+            {{/if}}
         </label></h2>
         <h2><label class="mod_skill" data-skill="Resolve">
             {{#if (gte actor.system.Resolve.value 1)}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
