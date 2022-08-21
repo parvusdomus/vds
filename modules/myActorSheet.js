@@ -84,8 +84,46 @@ export default class vdsActorSheet extends ActorSheet{
         actorData.Runes = Runes;
     }
 
+    //CALCULO LOS VALORES DE BONUS DE LAS CARACTERÍSTICAS
     _calculaValores(actorData) {
-
+        const sheetData = actorData;
+        console.log ("DATA")
+        console.log (sheetData)
+        let Power_Bonus=0;
+        let Aim_Bonus=0;
+        let Wits_Bonus=0;
+        let Guts_Bonus=0;
+        let Speed_Bonus=0;
+        let Resolve_Bonus=0;
+        for (let i of sheetData.items) {
+            console.log ("ITEMS")
+            console.log (i)
+            if (i.type === "Rune"){
+                if (i.system.Advance == 3){
+                    Power_Bonus+=i.system.Bonus.Power;
+                    Aim_Bonus+=i.system.Bonus.Aim;
+                    Wits_Bonus+=i.system.Bonus.Wits;
+                    Guts_Bonus+=i.system.Bonus.Guts;
+                    Speed_Bonus+=i.system.Bonus.Speed;
+                    Resolve_Bonus+=i.system.Bonus.Resolve;
+                }
+            } else
+            {
+                Power_Bonus+=i.system.Bonus.Power;
+                Aim_Bonus+=i.system.Bonus.Aim;
+                Wits_Bonus+=i.system.Bonus.Wits;
+                Guts_Bonus+=i.system.Bonus.Guts;
+                Speed_Bonus+=i.system.Bonus.Speed;
+                Resolve_Bonus+=i.system.Bonus.Resolve;
+            }
+            
+        }
+        this.actor.update ({ 'system.Power.bonus': Power_Bonus });
+        this.actor.update ({ 'system.Aim.bonus': Aim_Bonus });
+        this.actor.update ({ 'system.Wits.bonus': Wits_Bonus });
+        this.actor.update ({ 'system.Guts.bonus': Guts_Bonus });
+        this.actor.update ({ 'system.Speed.bonus': Speed_Bonus });
+        this.actor.update ({ 'system.Resolve.bonus': Resolve_Bonus });
     }
 
     /*COSAS DE EVENTOS Y CLICKS VARIOS */
@@ -164,18 +202,12 @@ export default class vdsActorSheet extends ActorSheet{
             const element = ev.currentTarget;
             const dataset = element.dataset;
             const rune=dataset.rune;
-            console.log ("RUNE")
-            console.log (rune)
             const update = {};
             update.data = {};
             var item=this.actor.items.get(rune);
-            console.log ("ITEM")
-            console.log (item)
-            var valor_actual=Number(item.system.Advance)
-            var valor_nuevo=valor_actual+1
-            if (valor_nuevo>3){valor_nuevo=0}
-            console.log ("VALOR NUEVO")
-            console.log (valor_nuevo)
+            var valor_actual=Number(item.system.Advance);
+            var valor_nuevo=valor_actual+1;
+            if (valor_nuevo>3){valor_nuevo=0};
             item.update ({ 'system.Advance': valor_nuevo });
         });
 

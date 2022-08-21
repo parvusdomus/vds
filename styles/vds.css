@@ -227,6 +227,8 @@
 
 .deaths{
     display: inline;
+    justify-content: center;
+    justify-items: center;
 }
 
 /* BIO TAB */
@@ -288,6 +290,7 @@
     display:grid;
     grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: auto auto auto auto auto auto auto auto;
+    justify-items: center;
 }
 
 .fichaSkill h1, .fichaArmor h1, .fichaItem h1, .fichaRune h1{
@@ -304,6 +307,10 @@
 
 .statroll, .rune_imagen{
     grid-column-end: span 2; 
+}
+
+.rune_imagen img{
+    width: 100px;
 }
 
 
@@ -325,5 +332,6 @@
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-end: span 2;
+    width: 100%;
 }
 

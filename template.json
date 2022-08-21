@@ -97,7 +97,7 @@
     "Item":{
         "types": ["Item", "Armor", "Skill", "Rune"],
             "Item": {
-                "Bonus_To_Wear":
+                "Bonus":
                 {
                     "Power": 0,
                     "Aim": 0,
@@ -113,13 +113,13 @@
                 },
                 "Material": "Iron",
                 "Stat": "None",
-                "Bonus": 0,
+                "Bonus_To_Roll": 0,
                 "Tags":"",
                 "Description": ""
 
             },
             "Armor": {
-                "Bonus_To_Wear":
+                "Bonus":
                 {
                     "Power": 0,
                     "Aim": 0,
@@ -147,7 +147,7 @@
                     "value": false,
                     "Stat": "Power"
                 },
-                "Bonus_To_Have":
+                "Bonus":
                 {
                     "Power": 0,
                     "Aim": 0,
@@ -160,7 +160,7 @@
             "Rune": {
                 "Description": "",
                 "Advance": 0,
-                "Bonus_To_Have":
+                "Bonus":
                 {
                     "Power": 0,
                     "Aim": 0,
