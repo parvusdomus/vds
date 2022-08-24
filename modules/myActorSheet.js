@@ -87,8 +87,6 @@ export default class vdsActorSheet extends ActorSheet{
     //CALCULO LOS VALORES DE BONUS DE LAS CARACTERÍSTICAS
     _calculaValores(actorData) {
         const sheetData = actorData;
-        console.log ("DATA")
-        console.log (sheetData)
         let Power_Bonus=0;
         let Aim_Bonus=0;
         let Wits_Bonus=0;
@@ -96,8 +94,6 @@ export default class vdsActorSheet extends ActorSheet{
         let Speed_Bonus=0;
         let Resolve_Bonus=0;
         for (let i of sheetData.items) {
-            console.log ("ITEMS")
-            console.log (i)
             if (i.type === "Rune"){
                 if (i.system.Advance == 3){
                     Power_Bonus+=Number(i.system.Bonus.Power);
@@ -184,8 +180,9 @@ export default class vdsActorSheet extends ActorSheet{
             const update = {};
             update.data = {};
             var valor_actual=Number(this.actor.system[skill].current)
+            var valor_max=Number(this.actor.system[skill].total)
             var valor_nuevo=valor_actual+1
-            if (valor_nuevo>6){valor_nuevo=0}
+            if (valor_nuevo>valor_max){valor_nuevo=0}
             const habilidad='system.'+skill+'.current'
             update[habilidad] = valor_nuevo;
             update.id = this.actor.id;

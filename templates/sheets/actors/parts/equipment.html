@@ -4,11 +4,23 @@
     <div class="equipment">
         {{#each Items as |item id|}}
             <li data-itemId="{{item._id}}">
-                {{#if (gte item.system.Hits.value 3)}}<div class="PJ_item_name" style="color: darkred;">{{item.name}}</div>{{else}}<div class="PJ_item_name">{{item.name}}</div>{{/if}}
-                {{#if (gte item.system.Hits.value 3)}}<div class="PJ_item_damage item_damage" data-itemId="{{item._id}}" style="color: darkred;">{{else}}<div class="PJ_item_damage item_damage" data-itemId="{{item._id}}">{{/if}}
+                {{#if (gte item.system.Hits.value item.system.Hits.max)}}<div class="PJ_item_name"  style="color: darkred;">{{item.name}}</div>{{else}}<div class="PJ_item_name">{{item.name}}</div>{{/if}}
+                {{#if (gte item.system.Hits.value item.system.Hits.max)}}<div class="PJ_item_damage item_damage" data-itemId="{{item._id}}"  style="color: darkred;">{{else}}<div class="PJ_item_damage item_damage" data-itemId="{{item._id}}">{{/if}}
+                {{#if (gte item.system.Hits.max 1)}}
                     {{#if (gte item.system.Hits.value 1)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                {{/if}}
+                {{#if (gte item.system.Hits.max 2)}}
                     {{#if (gte item.system.Hits.value 2)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                {{/if}}
+                {{#if (gte item.system.Hits.max 3)}}
                     {{#if (gte item.system.Hits.value 3)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                {{/if}}
+                {{#if (gte item.system.Hits.max 4)}}
+                    {{#if (gte item.system.Hits.value 4)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                {{/if}}
+                {{#if (gte item.system.Hits.max 5)}}
+                    {{#if (gte item.system.Hits.value 5)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                {{/if}}
                 </div>
                 <div class="item_controls">
                     <a class="item-edit" data-itemId="{{item._id}}"><i class="fas fa-edit"></i></a>
@@ -26,11 +38,23 @@
     <div class="equipment">
         {{#each Armors as |item id|}}
             <li data-itemId="{{item._id}}">
-                {{#if (gte item.system.Hits.value 3)}}<div class="PJ_item_name"  style="color: darkred;">{{item.name}}</div>{{else}}<div class="PJ_item_name">{{item.name}}</div>{{/if}}
-                {{#if (gte item.system.Hits.value 3)}}<div class="PJ_item_damage item_damage" data-itemId="{{item._id}}"  style="color: darkred;">{{else}}<div class="PJ_item_damage item_damage" data-itemId="{{item._id}}">{{/if}}
+                {{#if (gte item.system.Hits.value item.system.Hits.max)}}<div class="PJ_item_name"  style="color: darkred;">{{item.name}}</div>{{else}}<div class="PJ_item_name">{{item.name}}</div>{{/if}}
+                {{#if (gte item.system.Hits.value item.system.Hits.max)}}<div class="PJ_item_damage item_damage" data-itemId="{{item._id}}"  style="color: darkred;">{{else}}<div class="PJ_item_damage item_damage" data-itemId="{{item._id}}">{{/if}}
+                {{#if (gte item.system.Hits.max 1)}}
                     {{#if (gte item.system.Hits.value 1)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                {{/if}}
+                {{#if (gte item.system.Hits.max 2)}}
                     {{#if (gte item.system.Hits.value 2)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                {{/if}}
+                {{#if (gte item.system.Hits.max 3)}}
                     {{#if (gte item.system.Hits.value 3)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                {{/if}}
+                {{#if (gte item.system.Hits.max 4)}}
+                    {{#if (gte item.system.Hits.value 4)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                {{/if}}
+                {{#if (gte item.system.Hits.max 5)}}
+                    {{#if (gte item.system.Hits.value 5)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                {{/if}}
                 </div>
                 <div class="item_controls">
                     <a class="item-edit" data-itemId="{{item._id}}"><i class="fas fa-edit"></i></a>
