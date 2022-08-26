@@ -374,14 +374,16 @@
     <div class="runes_area">
         <div class="deaths">
             <h1 style="text-align:center">Deaths</h1>
-            {{#if (gte actor.system.Deaths.value actor.system.Deaths.max)}}<h1><span class="mod_death" style="color:darkred; text-align: center;">{{else}}<h1><span class="mod_death" style="text-align:center">{{/if}}
-            {{#if (eq actor.type "Immortal")}}
-                {{#if (gte actor.system.Deaths.value 1)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
-                {{#if (gte actor.system.Deaths.value 2)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
-                {{#if (gte actor.system.Deaths.value 3)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
-            {{else}}
-                {{#if (gte actor.system.Deaths.value 1)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
-            {{/if}}
+                {{#if (gte actor.system.Deaths.value actor.system.Deaths.max)}}<h1><span class="mod_death" style="color:darkred; text-align: center;">{{else}}<h1><span class="mod_death" style="text-align:center">{{/if}}
+                {{#if (gte actor.system.Deaths.max 1)}}
+                    {{#if (gte actor.system.Deaths.value 1)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                {{/if}}
+                {{#if (gte actor.system.Deaths.max 2)}}
+                    {{#if (gte actor.system.Deaths.value 2)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                {{/if}}
+                {{#if (gte actor.system.Deaths.max 3)}}
+                    {{#if (gte actor.system.Deaths.value 3)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
+                {{/if}}
             </span></h1>
         </div>
             {{#each Runes as |item id|}}
