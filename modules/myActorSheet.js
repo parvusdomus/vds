@@ -1,3 +1,5 @@
+import {statRoll} from "./PJ_Rolls.js";
+import {skillRoll} from "./PJ_Rolls.js";
 export default class vdsActorSheet extends ActorSheet{
     /*get template(){
         return `systems/vds/templates/sheets/actors/${this.actor.type}-sheet.html`;
@@ -204,7 +206,7 @@ export default class vdsActorSheet extends ActorSheet{
             update.id = this.actor.id;
             this.actor.update(update, {diff: true});
         });
-
+        //EDITAR Y BORRAR OBJETOS
         html.find('a.item-edit').click(ev=>{
             ev.preventDefault();
             const dataset = ev.currentTarget.dataset;
@@ -225,7 +227,7 @@ export default class vdsActorSheet extends ActorSheet{
             });
             return;
         });
-
+        //MODIFICADOR AVANCE SKILLS
         html.find('.mod_advance').click(ev => {
             const element = ev.currentTarget;
             const dataset = element.dataset;
@@ -239,7 +241,7 @@ export default class vdsActorSheet extends ActorSheet{
             if (valor_nuevo>5){valor_nuevo=valor_minimo}
             item.update ({ 'system.Advance': valor_nuevo });
         });
-
+        //MODIFICADOR AVANCE RUNAS
         html.find('.mod_rune').click(ev => {
             const element = ev.currentTarget;
             const dataset = element.dataset;
@@ -252,7 +254,7 @@ export default class vdsActorSheet extends ActorSheet{
             if (valor_nuevo>3){valor_nuevo=0};
             item.update ({ 'system.Advance': valor_nuevo });
         });
-
+        //MODIFICAR DAÑO DE OBJETOS
         html.find('.item_damage').click(ev => {
             const element = ev.currentTarget;
             const dataset = element.dataset;
@@ -269,10 +271,23 @@ export default class vdsActorSheet extends ActorSheet{
             console.log (valor_nuevo)
             item.update ({ 'system.Hits.value': valor_nuevo });
         });
-
-
-
+        //EVENTOS DE TIRADAS
+        html.find('.stat_roll').click(this._onStatRoll.bind(this));
+        html.find('.skill_roll').click(this._onSkillRoll.bind(this));
 
     }
     
+    async _onStatRoll(event) {
+        const element = event.currentTarget;
+        const dataset = element.dataset;
+        let objetivo = Array.from(game.user.targets)[0];
+        statRoll (this.actor, dataset.stat_name, objetivo)
+      }
+
+      async _onSkillRoll(event) {
+        const element = event.currentTarget;
+        const dataset = element.dataset;
+        let objetivo = Array.from(game.user.targets)[0];
+        skillRoll (this.actor, dataset.skill_name, objetivo)
+      }
 }

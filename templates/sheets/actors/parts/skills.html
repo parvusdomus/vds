@@ -1,10 +1,10 @@
 <div class="stat_skill">
     <div class="stat">
-        <h2><label>POWER</label></h2>
-        <h2><label>AIM</label></h2>
-        <h2><label>WITS</label></h2>
-        <h2><label>GUTS</label></h2>
-        <h2><label>SPEED</label></h2>
+        <h2><label class="stat_roll" data-stat_name="Power">POWER</label></h2>
+        <h2><label class="stat_roll" data-stat_name="Aim">AIM</label></h2>
+        <h2><label class="stat_roll" data-stat_name="Wits">WITS</label></h2>
+        <h2><label class="stat_roll" data-stat_name="Guts">GUTS</label></h2>
+        <h2><label class="stat_roll" data-stat_name="Speed">SPEED</label></h2>
         <h2><label>RESOLVE</label></h2>
     </div>
     <div class="stat_value">
@@ -352,7 +352,7 @@
         <h2><ul>
             {{#each Skills as |item id|}}
             <li data-itemId="{{item._id}}">
-                <div class="PJ_skill_name">{{item.name}}</div>
+                <div class="PJ_skill_name skill_roll" data-skill_name="{{item.name}}">{{item.name}}</div>
                 <div class="PJ_skill_advance mod_advance" data-itemId="{{item._id}}">
                     {{#if (gte item.system.Advance 1)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
                     {{#if (gte item.system.Advance 2)}}<i class="fas fa-circle"></i>{{else}}<i class="far fa-circle"></i>{{/if}}
